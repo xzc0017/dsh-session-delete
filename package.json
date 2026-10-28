@@ -1,0 +1,51 @@
+{
+  "name": "dsh-session-delete",
+  "version": "1.4.0",
+  "type": "module",
+  "description": "Adds a permanent Delete action to a Session's \"...\" menu in the DSH workspace sidebar, removing its log and projection cache instead of only archiving it.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "delete"
+  ],
+  "license": "MIT",
+  "author": "xzc0017",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzc0017/dsh-session-delete.git"
+  },
+  "homepage": "https://github.com/xzc0017/dsh-session-delete#readme",
+  "bugs": {
+    "url": "https://github.com/xzc0017/dsh-session-delete/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/delete-session.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

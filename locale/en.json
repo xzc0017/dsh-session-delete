@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session Delete",
+    "description": "Adds a permanent Delete action to a conversation's ... menu in the workspace sidebar, removing its log and projection cache from this computer."
+  }
+}

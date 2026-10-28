@@ -1,0 +1,5 @@
+# Adds one Host row. The row owns the HTTP route the sidebar menu item calls;
+# its client half is declared by package.json `dsh.client`.
+- insert:
+    - id: session-delete
+      name: dsh-session-delete
